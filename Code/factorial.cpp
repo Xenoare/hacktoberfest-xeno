@@ -4,21 +4,21 @@
 #include <iostream>
 using namespace std;
 
+int factorial(int N)
+{
+ if (N == 1)
+ {
+  return 1;
+ }
+ return N * factorial(N - 1);
+}
+
 int main()
 {
  int N;
  cin >> N;
 
- for (int i = N - 1; i > 0; i--)
- {
-  if (N == 1)
-  {
-   cout << 1;
-  }
-  N *= i;
- }
-
- cout << N;
+ cout << factorial(N) << endl;
 
  return 0;
 }
